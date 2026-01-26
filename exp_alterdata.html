@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Francisco Carvalho - Alterdata - Detalhes Técnicos Completos">
+  <title>Alterdata - Francisco Carvalho | QA Sênior</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #bd5d38;
+      --secondary-color: #495057;
+      --dark-bg: #1a1a2e;
+    }
+
+    body {
+      font-family: 'Muli', sans-serif;
+      color: var(--secondary-color);
+      background: #f8f9fa;
+      padding: 2rem 0;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    .detail-container {
+      max-width: 1200px;
+      margin: 80px auto 40px;
+      background: white;
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .company-header {
+      text-align: center;
+      padding-bottom: 2rem;
+      border-bottom: 3px solid var(--primary-color);
+      margin-bottom: 3rem;
+    }
+
+    .company-header h1 {
+      color: var(--dark-bg);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .company-header h2 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .company-header .meta {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    h5 {
+      color: var(--primary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 1rem;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .skill-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .bottom-navigation {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px solid #dee2e6;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #d63384;
+      font-size: 0.9em;
+    }
+
+    table {
+      margin-top: 1rem;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #f8f9fa;
+    }
+
+    @media (max-width: 768px) {
+      .detail-container {
+        margin: 60px 1rem 40px;
+        padding: 1.5rem;
+      }
+      
+      .back-button {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="index.html" class="back-button">
+    <i class="fas fa-arrow-left"></i> Voltar ao Portfólio
+  </a>
+
+  <div class="detail-container">
+    <div class="company-header">
+      <h1>ALTERDATA SOFTWARE - Projeto BimerUp ERP</h1>
+      <h2>QA Engineer - Squad API</h2>
+      <div class="meta">
+        <i class="far fa-calendar-alt"></i> Outubro 2020 - Março 2021 | Remoto
+      </div>
+    </div>
+
+    <p style="font-size: 1.05rem; line-height: 1.8;">
+              <strong>Projeto:</strong> BimerUp - Sistema ERP (Enterprise Resource Planning) completo<br>
+              <strong>Contexto:</strong> ERP integrado para gestão empresarial abrangendo módulos de <strong>Finanças, 
+              Estoque, Vendas, Compras, Fiscal e Contábil</strong>. Arquitetura de microserviços com APIs RESTful.
+            </p>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-microscope"></i> Modelagem de Testes com Técnicas Formais
+            </h5>
+            <ul>
+              <li><strong>Aplicação de técnicas de teste de caixa-preta:</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Particionamento de Equivalência:</strong>
+                    <ul>
+                      <li>Divisão de inputs em classes válidas e inválidas</li>
+                      <li>Exemplo: Campo "Quantidade" → Classes: {negativo, zero, 1-999, 1000-9999, ≥10000, 
+                      não-numérico}</li>
+                      <li>Testar 1 representante de cada classe (eficiência sem perder cobertura)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Análise de Valores Limite (Boundary Value Analysis):</strong>
+                    <ul>
+                      <li>Testes em bordas de intervalos: mínimo, mínimo+1, máximo-1, máximo</li>
+                      <li>Exemplo: Desconto (0-100%) → Testar: -1, 0, 1, 99, 100, 101</li>
+                      <li>Bugs frequentemente ocorrem em limites (off-by-one errors, overflow)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Tabelas de Decisão:</strong>
+                    <ul>
+                      <li>Combinações de condições de negócio (ex: descontos, impostos, regras fiscais)</li>
+                      <li>Exemplo: Desconto final depende de: Cliente VIP? Valor > R$ 1000? Pagamento à vista?</li>
+                      <li>Tabela: 2³ = 8 combinações possíveis → Testar todas</li>
+                      <li>Garantia de que todas regras de negócio foram validadas</li>
+                    </ul>
+                  </li>
+                  <li><strong>Teste Exploratório:</strong>
+                    <ul>
+                      <li>Sessões time-boxed (90 minutos) para descoberta de comportamentos inesperados</li>
+                      <li>Charter: "Explorar módulo de Vendas focando em edge cases de desconto"</li>
+                      <li>Documentação de descobertas em session-based test management (SBTM)</li>
+                      <li>Encontrados: bugs não cobertos por casos de teste formais, inconsistências de UX</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><strong>Resultado:</strong> Cobertura de testes estruturada e rastreável, redução de 40% em bugs 
+              escapando para produção</li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-plug"></i> Validação de Integrações de API
+            </h5>
+            <ul>
+              <li><strong>Postman + Ruby (HTTParty)</strong> para testes de API:
+                <ul style="margin-top: 8px;">
+                  <li><strong>Validação de Contratos:</strong>
+                    <ul>
+                      <li>Schema validation com JSON Schema (garantir estrutura de response está correta)</li>
+                      <li>Exemplo: Response de GET /produtos deve ter campos: {id, nome, preco, estoque}</li>
+                      <li>Versionamento de contratos (API v1 vs v2, backward compatibility)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Validação de Headers Obrigatórios:</strong>
+                    <ul>
+                      <li>Authorization (Bearer token, API key)</li>
+                      <li>Content-Type (application/json, application/xml)</li>
+                      <li>X-Request-ID (para distributed tracing)</li>
+                      <li>Teste de rejeição: Request sem Authorization → 401 Unauthorized</li>
+                    </ul>
+                  </li>
+                  <li><strong>Testes de Status Codes:</strong>
+                    <ul>
+                      <li>200 OK (GET bem-sucedido), 201 Created (POST bem-sucedido)</li>
+                      <li>400 Bad Request (payload inválido), 401 Unauthorized (autenticação falhou)</li>
+                      <li>404 Not Found (recurso não existe), 500 Internal Server Error (erro no servidor)</li>
+                      <li>Validação de mensagens de erro estruturadas (código de erro + mensagem + detalhes)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Validação de Payloads:</strong>
+                    <ul>
+                      <li>Campos obrigatórios presentes (ex: POST /venda requer {cliente_id, produtos, total})</li>
+                      <li>Tipos de dados corretos (string, number, boolean, array, object)</li>
+                      <li>Formatos específicos (email válido, CPF com 11 dígitos, data ISO 8601)</li>
+                      <li>Validação de ranges (ex: desconto entre 0-100, quantidade > 0)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Testes de Timeout e Retry Policies:</strong>
+                    <ul>
+                      <li>Timeout configurado em 30s (evitar requests pendurados indefinidamente)</li>
+                      <li>Retry com backoff exponencial (2s, 4s, 8s) para falhas transitórias (500, 502, 503)</li>
+                      <li>Circuit breaker após 3 falhas consecutivas (evitar sobrecarga de sistema instável)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-database"></i> Manipulação de Dados em SQL Server
+            </h5>
+            <ul>
+              <li><strong>Criação de massa de testes complexa:</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Scripts DDL (Data Definition Language):</strong>
+                    <ul>
+                      <li>Criação de tabelas temporárias para isolar testes: <code>CREATE TABLE #temp_produtos (...)</code></li>
+                      <li>Views para simplificar queries complexas: <code>CREATE VIEW vw_vendas_mes_atual AS 
+                      SELECT ...</code></li>
+                      <li>Índices para otimizar performance em queries de teste: <code>CREATE INDEX idx_cliente_id 
+                      ON vendas(cliente_id)</code></li>
+                    </ul>
+                  </li>
+                  <li><strong>Scripts DML (Data Manipulation Language):</strong>
+                    <ul>
+                      <li>INSERT em massa com dados sintéticos realistas (Faker lib ou scripts custom)</li>
+                      <li>UPDATE para simular cenários específicos (ex: atualizar status de venda para "cancelada")</li>
+                      <li>DELETE em cascata após execução de testes (cleanup automático)</li>
+                      <li>MERGE para upsert (inserir se não existe, atualizar se existe)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Joins Complexos entre Módulos:</strong>
+                    <ul>
+                      <li><strong>Vendas ↔ Estoque:</strong> Validar que venda debita estoque corretamente</li>
+                      <li><strong>Estoque ↔ Financeiro:</strong> Custo de mercadoria vendida (CMV) calculado corretamente</li>
+                      <li><strong>Financeiro ↔ Fiscal:</strong> Impostos (ICMS, PIS, COFINS) calculados sobre valor 
+                      correto</li>
+                      <li>Query exemplo: <code>SELECT v.id, v.total, SUM(i.quantidade * p.preco) AS total_calculado 
+                      FROM vendas v JOIN itens_venda i ON v.id = i.venda_id JOIN produtos p ON i.produto_id = p.id 
+                      GROUP BY v.id, v.total HAVING v.total <> SUM(i.quantidade * p.preco)</code> → Detectar 
+                      inconsistências em totais</li>
+                    </ul>
+                  </li>
+                  <li><strong>Validação Transacional (ACID):</strong>
+                    <ul>
+                      <li><strong>Atomicity:</strong> Venda deve ser completa ou totalmente revertida (BEGIN TRANSACTION... 
+                      COMMIT/ROLLBACK)</li>
+                      <li><strong>Consistency:</strong> Saldo de estoque nunca negativo (constraint CHECK estoque >= 0)</li>
+                      <li><strong>Isolation:</strong> Transações concorrentes não se interferem (níveis de isolamento: 
+                      READ COMMITTED, SERIALIZABLE)</li>
+                      <li><strong>Durability:</strong> Após COMMIT, dados persistem mesmo em caso de crash</li>
+                      <li>Testes de cenários: 2 usuários vendendo último item em estoque simultaneamente → Apenas 1 
+                      deve ser bem-sucedido</li>
+                    </ul>
+                  </li>
+                  <li><strong>Queries para Verificação de Integridade Referencial:</strong>
+                    <ul>
+                      <li>Foreign keys respeitadas: <code>SELECT * FROM vendas WHERE cliente_id NOT IN (SELECT id 
+                      FROM clientes)</code> → Deve retornar 0 linhas</li>
+                      <li>Órfãos em tabelas relacionadas: <code>SELECT * FROM itens_venda WHERE venda_id NOT IN 
+                      (SELECT id FROM vendas)</code></li>
+                      <li>Dados duplicados indesejados: <code>SELECT cpf, COUNT(*) FROM clientes GROUP BY cpf 
+                      HAVING COUNT(*) > 1</code></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-project-diagram"></i> Testes de Integração End-to-End
+            </h5>
+            <ul>
+              <li><strong>Fluxos completos inter-módulos:</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Exemplo de fluxo E2E: Venda → Estoque → Financeiro → Fiscal → Contábil</strong>
+                    <ol style="margin-top: 8px;">
+                      <li><strong>1. Venda:</strong> Vendedor registra venda de produto no sistema (UI ou API)</li>
+                      <li><strong>2. Baixa de Estoque:</strong> Sistema debita quantidade vendida do estoque automaticamente</li>
+                      <li><strong>3. Lançamento Financeiro:</strong> Contas a receber criada (se venda a prazo) ou 
+                      caixa creditado (se venda à vista)</li>
+                      <li><strong>4. Emissão de NF-e:</strong> Nota Fiscal Eletrônica gerada e enviada para SEFAZ 
+                      (Secretaria da Fazenda Estadual)</li>
+                      <li><strong>5. Contabilização:</strong> Lançamento contábil automático (débito: caixa ou contas 
+                      a receber, crédito: receita de vendas)</li>
+                    </ol>
+                  </li>
+                  <li><strong>Validação de propagação de dados:</strong>
+                    <ul>
+                      <li>Dados da venda (cliente, produtos, valores) devem estar consistentes em todas as tabelas 
+                      (vendas, estoque, financeiro, fiscal, contábil)</li>
+                      <li>Timestamps devem ser coerentes (venda não pode ter lançamento financeiro antes da própria venda)</li>
+                      <li>Status devem ser sincronizados (venda cancelada → estoque devolvido, financeiro estornado, 
+                      NF-e cancelada)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Verificação de Rollback:</strong>
+                    <ul>
+                      <li>Se emissão de NF-e falhar (SEFAZ offline), toda transação deve ser revertida</li>
+                      <li>Validação: Estoque volta ao valor original, financeiro não é lançado, venda fica com 
+                      status "erro_fiscal"</li>
+                      <li>Logs devem documentar motivo da falha para troubleshooting</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-user-check"></i> Testes de Usabilidade
+            </h5>
+            <ul>
+              <li><strong>Avaliação heurística de interfaces (Nielsen's 10 Usability Heuristics):</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Consistência visual e de navegação:</strong>
+                    <ul>
+                      <li>Botões de ação primária sempre no mesmo local (ex: canto inferior direito)</li>
+                      <li>Cores consistentes (verde = confirmar, vermelho = cancelar, azul = informação)</li>
+                      <li>Terminologia padronizada ("Salvar" vs "Gravar" → Escolher um e usar sempre)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Mensagens de erro claras e acionáveis:</strong>
+                    <ul>
+                      <li>❌ Ruim: "Erro 500" → ✅ Bom: "Não foi possível salvar o produto. Verifique se todos os 
+                      campos obrigatórios estão preenchidos."</li>
+                      <li>Incluir: O que aconteceu, Por que aconteceu, O que fazer para resolver</li>
+                      <li>Evitar jargão técnico para usuários finais</li>
+                    </ul>
+                  </li>
+                  <li><strong>Tempo de resposta percebido:</strong>
+                    <ul>
+                      <li>Loading indicators para operações > 1s (spinner, barra de progresso)</li>
+                      <li>Feedback imediato para ações do usuário (botão muda de estado ao clicar)</li>
+                      <li>Skeleton screens enquanto carrega dados (melhora percepção de velocidade)</li>
+                    </ul>
+                  </li>
+                  <li><strong>Acessibilidade básica:</strong>
+                    <ul>
+                      <li>Contraste de cores suficiente (WCAG AA: mínimo 4.5:1 para texto normal)</li>
+                      <li>Tamanho de fonte adequado (mínimo 14px para corpo de texto)</li>
+                      <li>Elementos interativos com área clicável >= 44x44px (para touch screens)</li>
+                      <li>Labels descritivos em campos de formulário</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-redo"></i> Testes de Regressão
+            </h5>
+            <ul>
+              <li><strong>Suite de testes de regressão executada a cada Sprint:</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Cenários críticos de cada módulo (Smoke Tests):</strong>
+                    <ul>
+                      <li>Vendas: Criar venda, cancelar venda, emitir NF-e</li>
+                      <li>Estoque: Entrada de produto, saída de produto, transferência entre depósitos</li>
+                      <li>Financeiro: Lançar conta a pagar, baixar conta a receber, conciliação bancária</li>
+                      <li>Fiscal: Emitir NF-e, cancelar NF-e, gerar SPED Fiscal</li>
+                    </ul>
+                  </li>
+                  <li><strong>Cobertura de 80%+ dos fluxos principais</strong> (Pareto: 20% das funcionalidades 
+                  representam 80% do uso)</li>
+                  <li><strong>Execução em 3 ambientes:</strong>
+                    <ul>
+                      <li><strong>Teste:</strong> Validação inicial de desenvolvedores, dados sintéticos, pode 
+                      ter downtime</li>
+                      <li><strong>Produção Espelho (Staging/Homologação):</strong> Cópia exata de produção, dados 
+                      reais anonimizados, alta disponibilidade</li>
+                      <li><strong>UAT (User Acceptance Testing):</strong> Ambiente onde usuários-chave validam 
+                      antes de produção</li>
+                    </ul>
+                  </li>
+                  <li><strong>Automação gradual:</strong> Início 100% manual, meta de automatizar 50% dos casos 
+                  críticos em 3 meses</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-chart-pie"></i> Relatórios Gerenciais e Padrões de Qualidade
+            </h5>
+            <ul>
+              <li><strong>Consolidação de métricas de qualidade:</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Bugs encontrados por severidade:</strong> Crítico (blocker), Alto, Médio, Baixo</li>
+                  <li><strong>Taxa de defeitos:</strong> Bugs encontrados / Funcionalidades testadas (meta: < 10%)</li>
+                  <li><strong>Cobertura de testes por módulo:</strong> % de requisitos cobertos por casos de teste</li>
+                  <li><strong>Tempo médio de execução:</strong> Benchmark para planejamento de sprints futuras</li>
+                  <li><strong>Eficiência de detecção:</strong> Bugs encontrados em QA / Bugs totais (incluindo 
+                  produção) → Meta: > 90%</li>
+                </ul>
+              </li>
+              <li><strong>Implementação de padrões de qualidade:</strong>
+                <ul style="margin-top: 8px;">
+                  <li>Checklists de Definition of Ready (história de usuário pronta para desenvolvimento)</li>
+                  <li>Templates de casos de teste (estrutura padronizada)</li>
+                  <li>Critérios de aceite claros e mensuráveis</li>
+                  <li>Definition of Done (código revisado, testado, documentado, deployado em homologação)</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-calendar-check"></i> Reporte Técnico Sprint-a-Sprint
+            </h5>
+            <ul>
+              <li><strong>Elaboração de relatório ao final de cada Sprint (2 semanas):</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Resumo executivo:</strong> Status geral de qualidade (Verde/Amarelo/Vermelho)</li>
+                  <li><strong>Testes executados vs planejados:</strong> 45 de 50 casos executados (90%)</li>
+                  <li><strong>Bugs críticos abertos:</strong> Lista com IDs, descrição resumida, impacto</li>
+                  <li><strong>Riscos identificados:</strong> "Módulo Fiscal com 5 bugs altos, pode atrasar release"</li>
+                  <li><strong>Recomendações:</strong> "Sugerimos sprint adicional de estabilização antes de produção"</li>
+                  <li><strong>Lições aprendidas:</strong> "Testes de integração devem iniciar mais cedo na sprint"</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5 style="color: var(--primary-color); margin-top: 1.5rem; margin-bottom: 1rem;">
+              <i class="fas fa-check-circle"></i> Garantia de Conformidade com Requisitos
+            </h5>
+            <ul>
+              <li><strong>Validação rigorosa em 3 ambientes:</strong>
+                <ul style="margin-top: 8px;">
+                  <li><strong>Teste:</strong> Validação inicial de desenvolvedores (smoke tests, testes unitários)</li>
+                  <li><strong>UAT:</strong> Homologação com usuários-chave do negócio (aceitação funcional)</li>
+                  <li><strong>Produção:</strong> Smoke tests pós-deploy (validação de deploy bem-sucedido)</li>
+                </ul>
+              </li>
+              <li><strong>Sistema funcionando corretamente</strong> de acordo com requisitos de negócio, validado 
+              por stakeholders internos e clientes finais</li>
+              <li><strong>Zero critical bugs em produção</strong> durante período de atuação (5 meses)</li>
+            </ul>
+
+            <div class="mt-4">
+              <span class="skill-badge">Postman</span>
+              <span class="skill-badge">Ruby</span>
+              <span class="skill-badge">HTTParty</span>
+              <span class="skill-badge">RSpec</span>
+              <span class="skill-badge">SQL Server</span>
+              <span class="skill-badge">DDL/DML</span>
+              <span class="skill-badge">Joins Complexos</span>
+              <span class="skill-badge">Jira (Xray)</span>
+              <span class="skill-badge">Confluence</span>
+              <span class="skill-badge">Mantis</span>
+              <span class="skill-badge">Particionamento de Equivalência</span>
+              <span class="skill-badge">Análise de Limites</span>
+              <span class="skill-badge">Tabelas de Decisão</span>
+              <span class="skill-badge">Teste Exploratório</span>
+              <span class="skill-badge">ERP</span>
+
+    <div class="bottom-navigation">
+      <a href="index.html" class="back-button" style="position: relative; top: 0; left: 0;">
+        <i class="fas fa-arrow-left"></i> Voltar ao Portfólio
+      </a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
